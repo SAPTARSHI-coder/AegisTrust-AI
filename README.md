@@ -182,17 +182,20 @@ source venv/bin/activate          # macOS / Linux
 pip install -r requirements.txt
 ```
 
-### 3. Frontend Build
+### 3. Frontend Build ⚠️ Required — do NOT skip
 ```bash
 cd frontend
-npm install
-npm run build
+npm install        # installs node_modules (not in repo — this step is mandatory)
+npm run build      # compiles src/ → dist/ (served by FastAPI)
 cd ..
 ```
 
+> **Why?** `node_modules/` and `dist/` are excluded from git (standard practice).  
+> The FastAPI server automatically serves the compiled `dist/` as the web UI.
+
 ### 4. Launch the Platform
 ```bash
-# Option A: One-command runner (macOS/Linux)
+# Option A: One-command runner — handles everything automatically
 ./run.sh
 
 # Option B: Manual start

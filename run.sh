@@ -12,9 +12,17 @@ echo "=========================================================="
 # Activate virtualenv
 source "$SCRIPT_DIR/venv/bin/activate"
 
-# Check if frontend is built
+# Install frontend dependencies if needed
+if [ ! -d "$SCRIPT_DIR/frontend/node_modules" ]; then
+    echo "📦 Installing frontend dependencies..."
+    cd "$SCRIPT_DIR/frontend"
+    npm install
+    cd "$SCRIPT_DIR"
+fi
+
+# Build frontend if not already built
 if [ ! -d "$SCRIPT_DIR/frontend/dist" ]; then
-    echo "📦 Building frontend production bundle..."
+    echo "⚙️  Building frontend production bundle..."
     cd "$SCRIPT_DIR/frontend"
     npm run build
     cd "$SCRIPT_DIR"
