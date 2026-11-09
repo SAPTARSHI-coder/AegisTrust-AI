@@ -23,7 +23,8 @@
 
 <br/>
 
-![AegisTrust Platform Demo](https://img.shields.io/badge/🚀%20Live%20Platform-localhost%3A8000-cyan?style=for-the-badge)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Platform-aegistrust--ai.onrender.com-06b6d4?style=for-the-badge)](https://aegistrust-ai.onrender.com)
+[![API Docs](https://img.shields.io/badge/📡%20API%20Docs-/docs-009688?style=for-the-badge)](https://aegistrust-ai.onrender.com/docs)
 
 </div>
 
